@@ -2,12 +2,26 @@
 
 const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 
+let lettera = prompt("Inserisci una lettera:");
 
 // Dichiara la funzione qui.
 
+function cercaLettera(myArrey, lettera){   
+    const newArray = [];
+    for (let i = 0; i < myArrey.length; i++){
 
+        if(myArrey[i].charAt(0).toLowerCase() === lettera.toLowerCase()){
+            
+            newArray.push(myArrey[i]);
+        }
+       
+    }
+    return newArray;
+        
+    }
 // Invoca la funzione qui e stampa il risultato in console
 
-
+const arrayFinale = cercaLettera(names, lettera);
+console.log(arrayFinale);
 
 //Risultato atteso se si passa la lettera A: ["Anna", "Adele", "Alessandra"]
